@@ -6,13 +6,21 @@
 using namespace std;
 
 double add(double a, double b)
-{ return a + b; }
+{
+    return a + b;
+}
 double sub(double a, double b)
-{ return a - b; }
+{
+    return a - b;
+}
 double mul(double a, double b)
-{ return a * b; }
+{
+    return a * b;
+}
 double div(double a, double b)
-{ return a / b; }
+{
+    return a / b;
+}
 
 int main(int argc, char* argv[])
 {
@@ -33,31 +41,38 @@ int main(int argc, char* argv[])
 
     //Массивы чисел и знаков заполнены
 
-    for (int x = 0; x < razmzn; x++) {
-    if (znaks[x] == '*') {
-      chisla[x] = mul((double)(chisla[x]), (double)(chisla[x + 1]));
-      razmch = razmch - 1;
+    for (int x = 0; x < razmzn; x++)
+    {
+        if (znaks[x] == '*')
+        {
+            chisla[x] = mul((double)(chisla[x]), (double)(chisla[x + 1]));
+            razmch = razmch - 1;
+        }
     }
-}
-    for (int x = 0; x < razmzn; x++) {
-    if (znaks[x] == '/') {
-      chisla[x] = div((double)(chisla[x]), (double)(chisla[x + 1]));
-      razmch = razmch - 1;
+    for (int x = 0; x < razmzn; x++)
+    {
+        if (znaks[x] == '/')
+        {
+            chisla[x] = div((double)(chisla[x]), (double)(chisla[x + 1]));
+            razmch = razmch - 1;
+        }
     }
-}
-     for (int x = 0; x < razmzn; x++) {
-     if (znaks[x] == '+') {
-      chisla[x] = add((double)(chisla[x]), (double)(chisla[x + 1]));
-      razmch = razmch - 1;
+    for (int x = 0; x < razmzn; x++)
+    {
+        if (znaks[x] == '+')
+        {
+            chisla[x] = add((double)(chisla[x]), (double)(chisla[x + 1]));
+            razmch = razmch - 1;
+        }
     }
-}
-     for (int x = 0; x < razmzn; x++) {
-     if (znaks[x] == '-') {
-      chisla[x] = sub((double)(chisla[x]), (double)(chisla[x + 1]));
-      razmch = razmch - 1;
+    for (int x = 0; x < razmzn; x++)
+    {
+        if (znaks[x] == '-')
+        {
+            chisla[x] = sub((double)(chisla[x]), (double)(chisla[x + 1]));
+            razmch = razmch - 1;
+        }
     }
-}
 
     cout << chisla[0];
 }
-
